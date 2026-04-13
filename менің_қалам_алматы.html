@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Менің қалам — Алматы</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #f7f6f2;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      color: #1a1a1a;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      color: #f7f6f2;
+      padding: 60px 40px 50px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 48px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    header p.subtitle {
+      font-size: 16px;
+      color: #aaa;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 16px 40px;
+      border-bottom: 1px solid #e5e5e5;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #555;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    nav a:hover { color: #1a1a1a; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      height: 480px;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-caption {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: rgba(255,255,255,0.88);
+      padding: 10px 18px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #555;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 13px;
+      font-family: Arial, sans-serif;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 18px;
+      text-align: justify;
+      text-indent: 30px;
+    }
+
+    .img-block {
+      margin: 32px 0;
+      text-align: center;
+    }
+
+    .img-block img {
+      width: 100%;
+      max-width: 700px;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .img-caption {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 8px;
+      letter-spacing: 1px;
+      text-indent: 0;
+    }
+
+    .places-section {
+      background-color: #fff;
+      border: 1px solid #e5e5e5;
+      padding: 36px 40px;
+      margin-bottom: 60px;
+    }
+
+    .places-section h2 {
+      margin-bottom: 24px;
+    }
+
+    .places-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .place-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px;
+      background: #f7f6f2;
+    }
+
+    .place-num {
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      color: #ccc;
+      font-weight: 700;
+      flex-shrink: 0;
+      line-height: 1;
+      margin-top: 2px;
+    }
+
+    .place-info strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: Arial, sans-serif;
+      margin-bottom: 4px;
+    }
+
+    .place-info span {
+      font-size: 13px;
+      color: #777;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    .video-section {
+      margin-bottom: 60px;
+    }
+
+    .video-section iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      display: block;
+    }
+
+    .link-block {
+      background: #1a1a1a;
+      padding: 32px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .link-block p {
+      color: #f7f6f2;
+      font-size: 16px;
+      text-indent: 0;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .link-block a {
+      color: #f7f6f2;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-bottom: 1px solid #555;
+      white-space: nowrap;
+      margin-left: 24px;
+      flex-shrink: 0;
+    }
+
+    .link-block a:hover { border-color: #fff; }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: #e5e5e5;
+      margin-bottom: 60px;
+    }
+
+    .stat-box {
+      background: #fff;
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-size: 32px;
+      font-weight: 400;
+      color: #1a1a1a;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #aaa;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: #888;
+      text-align: center;
+      padding: 36px 24px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    footer span { color: #aaa; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 32px; }
+      .hero { height: 260px; }
+      .places-grid { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: 1fr; }
+      .link-block { flex-direction: column; gap: 20px; }
+      .link-block a { margin-left: 0; }
+      nav { gap: 16px; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Менің қалам</h1>
+    <p class="subtitle">Алматы &mdash; Қазақстан</p>
+  </header>
+
+  <nav>
+    <a href="#about">Қала туралы</a>
+    <a href="#places">Көрікті жерлер</a>
+    <a href="#nature">Табиғат</a>
+    <a href="#music">Мәдениет</a>
+  </nav>
+
+  <div class="hero">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Almaty_Panorama_2012.jpg/1280px-Almaty_Panorama_2012.jpg" alt="Алматы қаласының панорамасы">
+    <div class="hero-caption">Алматы панорамасы</div>
+  </div>
+
+  <main>
+
+    <div class="stats-row">
+      <div class="stat-box">
+        <span class="stat-num">2 млн+</span>
+        <span class="stat-label">Тұрғын</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">1030 м</span>
+        <span class="stat-label">Теңіз деңгейінен биіктігі</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">1854</span>
+        <span class="stat-label">Негізі қаланған жыл</span>
+      </div>
+    </div>
+
+    <section id="about">
+      <h2>Қала туралы</h2>
+      <p>
+        Алматы — Қазақстанның оңтүстік-шығысында орналасқан ең ірі және ең көрікті қаласы. Тянь-Шань тауларының бауырайында жайғасқан бұл қала өзінің тамаша табиғатымен, заманауи сәулетімен және бай мәдениетімен таң қалдырады.
+      </p>
+      <p>
+        Қала 1854 жылы Верный бекінісі ретінде негізі қаланып, кейін Алма-Ата деп аталды. Тәуелсіздік алғаннан кейін қала ресми түрде Алматы деп өзгертілді. Бүгінде Алматы елдің қаржылық, мәдени және білім орталығы болып саналады.
+      </p>
+      <p>
+        Алматы — таулардың аясындағы жасыл желекке оранған, дамыған инфрақұрылымы бар, ірі халықаралық қала. Мұнда мыңдаған студент, кәсіпкер және туристер жыл сайын келіп жатады.
+      </p>
+    </section>
+
+    <div class="img-block">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Medeu_Almaty.jpg/1280px-Medeu_Almaty.jpg" alt="Медеу шаңғы-конькі стадионы">
+      <p class="img-caption">Медеу — дүниежүзіндегі ең биік мұз айдыны</p>
+    </div>
+
+    <section id="nature">
+      <h2>Табиғат және спорт</h2>
+      <p>
+        Медеу — Алматыдан 18 км жерде, теңіз деңгейінен 1691 м биікте орналасқан дүниежүзіндегі ең ірі жасанды мұз айдыны. Мұнда жүздеген әлем рекорды орнатылған, ал конькімен сырғанау мен хоккей ойындары жыл бойы өткізіледі.
+      </p>
+      <p>
+        Шымбұлақ тау-шаңғы курорты Медеудің жоғарысында орналасып, Алматы туристерінің сүйікті демалыс орнына айналған. Қысқы маусымда шаңғымен сырғанауға, жазда трекингке келушілер саны жыл санап артып келеді.
+      </p>
+    </section>
+
+    <div class="img-block">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Kok_Tobe_hill_Almaty.jpg/1280px-Kok_Tobe_hill_Almaty.jpg" alt="Көктөбе — Алматының таңбасы">
+      <p class="img-caption">Көктөбе — Алматының символы</p>
+    </div>
+
+    <section>
+      <h2>Тарих және мәдениет</h2>
+      <p>
+        Алматының жүрегі — орталық алаңы мен көшелері. Республика алаңы, Панфилов саябағы, Жазушылар одағының ғимараты — бұл орындардың әрқайсысы өз тарихымен, өз оқиғасымен ерекше. Ескі Абай даңғылы мен Арбат көшесі жергілікті тұрғындар мен туристердің сүйікті орындарына айналған.
+      </p>
+      <p>
+        Алматыда 20-дан астам музей, ондаған театр мен галерея жұмыс істейді. Қазақ мемлекеттік академиялық опера және балет театры, Орталық мемлекеттік музей — мәдениет пен өнердің бесігі.
+      </p>
+      <p>
+        Көктөбе — теңіз деңгейінен 1100 м биіктікте орналасқан Алматының ең танымал жері. Мұнда фуникулермен немесе жаяу жолмен жетіп, бүкіл қаланың тамаша көрінісін тамашалауға болады.
+      </p>
+    </section>
+
+    <section class="places-section" id="places">
+      <h2>Ең көрікті орындар</h2>
+      <div class="places-grid">
+        <div class="place-item">
+          <span class="place-num">01</span>
+          <div class="place-info">
+            <strong>Медеу</strong>
+            <span>Дүниежүзіндегі ең ірі жасанды мұз айдыны, теңіз деңгейінен 1691 м</span>
+          </div>
+        </div>
+        <div class="place-item">
+          <span class="place-num">02</span>
+          <div class="place-info">
+            <strong>Көктөбе</strong>
+            <span>Алматының символы — теледидар мұнарасы бар тау</span>
+          </div>
+        </div>
+        <div class="place-item">
+          <span class="place-num">03</span>
+          <div class="place-info">
+            <strong>Шымбұлақ</strong>
+            <span>Заманауи тау-шаңғы курорты, 3200 м биіктікке дейін</span>
+          </div>
+        </div>
+        <div class="place-item">
+          <span class="place-num">04</span>
+          <div class="place-info">
+            <strong>Панфилов саябағы</strong>
+            <span>Тарихи саябақ, Жетісу кафедралдық соборы орналасқан</span>
+          </div>
+        </div>
+        <div class="place-item">
+          <span class="place-num">05</span>
+          <div class="place-info">
+            <strong>Республика алаңы</strong>
+            <span>Қаланың орталық алаңы, мерекелер мен шаралар өтетін жер</span>
+          </div>
+        </div>
+        <div class="place-item">
+          <span class="place-num">06</span>
+          <div class="place-info">
+            <strong>Орталық мемлекеттік музей</strong>
+            <span>Қазақстанның ең ірі тарихи-этнографиялық музейі</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="music" class="video-section">
+      <h2>Мәдениет</h2>
+      <iframe
+        src="https://www.youtube.com/embed/0Iebwavhio8"
+        title="Алматы туралы ән"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <div class="link-block">
+      <p>Алматы туралы толық ақпарат алғыңыз келсе, ресми сайтқа өтіңіз.</p>
+      <a href="https://almaty.kz" target="_blank">Almaty.kz →</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <span>© 2026 Менің қалам &mdash; Алматы</span>
+  </footer>
+
+</body>
+</html>
